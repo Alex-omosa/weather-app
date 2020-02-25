@@ -20,12 +20,13 @@ window.addEventListener("load", () => {
         })
         .then(data => {
           const { temperature, summary, icon } = data.currently;
-          //DOM elements from API
-          temperatureDegree.textContent = temperature;
-          temperatureDescription.textContent = summary;
-          locationTimeZone.textContent = data.timezone;
           // formula
           let celsius = (temperature - 32) * (5 / 9);
+          //DOM elements from API
+          temperatureDegree.textContent = Math.floor(celsius);
+          temperatureDescription.textContent = summary;
+          locationTimeZone.textContent = data.timezone;
+
           //set icons
           setIcon(icon, document.getElementById("icon1"));
           // change to C or F

@@ -8,17 +8,20 @@
   </head>
   <body>
     <div class="location">
-      <h1 class=" location-timezone">Timezone</h1>
-      <p>icon</p>
+      <h1 class=" location-timezone" id="location-timezone">Timezone</h1>
+      <canvas id="icon1" width="128" height="128"></canvas>
     </div>
     <div class="temperature">
       <div class="degree-section">
-        <h2 class="temperature-degree">34</h2>
+        <h2 class="temperature-degree" id="temperature-degree"></h2>
         <span>F</span>
       </div>
 
-      <div class="tempareture-description">tempareture description</div>
+      <div class="tempareture-description" id="tempareture-description">
+        tempareture description
+      </div>
     </div>
+    <script src="skycons.js"></script>
     <script src="app.js"></script>
   </body>
 </html>
